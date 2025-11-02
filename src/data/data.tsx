@@ -11,10 +11,10 @@ import {
 import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import heroImage from '../images/header-background.webp';
 import profilepic from '../images/avatar.jpg';
-import testimonialImage from '../images/testimonial.webp';
+import heroImage from '../images/header-background.webp';
 import resumePDF from '../images/LE-BAO-QUOC.pdf';
+import testimonialImage from '../images/testimonial.webp';
 import {
   About,
   ContactSection,
@@ -32,8 +32,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Bao Quoc',
+  description: "Bao Quoc's Resume",
 };
 
 /**
@@ -61,13 +61,13 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Ho Chi Minh City based <strong className="text-stone-100">Backend Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">TEKO VIETNAM TECHNOLOGY JOINT STOCK COMPANY</strong> helping build scalable, 
-        high-performance integration-accounting-warehouse systems for large-scale e-commerce platforms.
+        I'm a Ho Chi Minh City based <strong className="text-stone-100">Backend Software Engineer</strong>, currently
+        working at <strong className="text-stone-100">TEKO VIETNAM TECHNOLOGY JOINT STOCK COMPANY</strong> helping build
+        scalable, high-performance integration-accounting-warehouse systems for large-scale e-commerce platforms.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time, I enjoy listening to <strong className="text-stone-100">music</strong>, 
-        reading <strong className="text-stone-100">books</strong>, and exploring 
+        In my free time, I enjoy listening to <strong className="text-stone-100">music</strong>, reading{' '}
+        <strong className="text-stone-100">books</strong>, and exploring
         <strong className="text-stone-100"> new ideas and experiences</strong>.
       </p>
     </>
@@ -126,7 +126,7 @@ export const skills: SkillGroup[] = [
       },
     ],
   },
-    {
+  {
     name: 'Backend development',
     skills: [
       {
@@ -158,7 +158,6 @@ export const skills: SkillGroup[] = [
         name: 'JavaScript',
         level: 6,
       },
-    
     ],
   },
   {
@@ -186,67 +185,78 @@ export const skills: SkillGroup[] = [
 export const portfolioItems: PortfolioItem[] = [
   {
     title: 'E-Commerce Integration Platform',
-    description: 'Built scalable microservices architecture for integration-accounting-warehouse systems handling millions of transactions monthly using Golang and Python.',
+    description:
+      'Built scalable microservices architecture for integration-accounting-warehouse systems handling millions of transactions monthly using Golang and Python.',
     url: 'https://github.com/BaoquocF1804',
     image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop',
   },
   {
     title: 'Partner API Gateway',
-    description: 'Developed RESTful APIs for logistics, payment, and merchant integrations with optimized performance (500ms → 200ms latency).',
+    description:
+      'Developed RESTful APIs for logistics, payment, and merchant integrations with optimized performance (500ms → 200ms latency).',
     url: 'https://github.com/BaoquocF1804',
     image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop',
   },
   {
     title: 'Cloud-Native Microservices',
-    description: 'Designed and deployed microservices on Google Cloud Platform (GKE) with gRPC for efficient service-to-service communication.',
+    description:
+      'Designed and deployed microservices on Google Cloud Platform (GKE) with gRPC for efficient service-to-service communication.',
     url: 'https://github.com/BaoquocF1804',
     image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop',
   },
   {
     title: 'CI/CD Pipeline Automation',
-    description: 'Implemented automated CI/CD pipelines using GitHub Actions and GitLab CI to accelerate deployment cycles and reduce production issues.',
+    description:
+      'Implemented automated CI/CD pipelines using GitHub Actions and GitLab CI to accelerate deployment cycles and reduce production issues.',
     url: 'https://github.com/BaoquocF1804',
     image: 'https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=800&h=600&fit=crop',
   },
   {
     title: 'High-Performance API Optimization',
-    description: 'Optimized critical API endpoints and database queries, improving system performance and reducing response times by 60%.',
+    description:
+      'Optimized critical API endpoints and database queries, improving system performance and reducing response times by 60%.',
     url: 'https://github.com/BaoquocF1804',
     image: 'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&h=600&fit=crop',
   },
   {
     title: 'Distributed System Architecture',
-    description: 'Architected event-driven microservices with message queues and caching layers for high-availability e-commerce systems.',
+    description:
+      'Architected event-driven microservices with message queues and caching layers for high-availability e-commerce systems.',
     url: 'https://github.com/BaoquocF1804',
     image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop',
   },
   {
     title: 'Payment Integration Service',
-    description: 'Built secure payment gateway integrations with multiple providers, ensuring PCI compliance and transaction reliability.',
+    description:
+      'Built secure payment gateway integrations with multiple providers, ensuring PCI compliance and transaction reliability.',
     url: 'https://github.com/BaoquocF1804',
     image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop',
   },
   {
     title: 'Warehouse Management System',
-    description: 'Developed backend services for real-time inventory tracking and warehouse operations with PostgreSQL and Redis.',
+    description:
+      'Developed backend services for real-time inventory tracking and warehouse operations with PostgreSQL and Redis.',
     url: 'https://github.com/BaoquocF1804',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
   },
   {
     title: 'Monitoring & Observability',
-    description: 'Implemented comprehensive logging, monitoring, and alerting systems using Prometheus, Grafana, and ELK stack.',
+    description:
+      'Implemented comprehensive logging, monitoring, and alerting systems using Prometheus, Grafana, and ELK stack.',
     url: 'https://github.com/BaoquocF1804',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
   },
   {
     title: 'Database Performance Tuning',
-    description: 'Optimized database schemas, indexes, and queries for MySQL and PostgreSQL, handling high-volume transactional workloads.',
+    description:
+      'Optimized database schemas, indexes, and queries for MySQL and PostgreSQL, handling high-volume transactional workloads.',
     url: 'https://github.com/BaoquocF1804',
     image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=600&fit=crop',
   },
   {
     title: 'API Documentation & Testing',
-    description: 'Created comprehensive API documentation with Swagger/OpenAPI and implemented robust unit and integration testing frameworks.',
+    description:
+      'Created comprehensive API documentation with Swagger/OpenAPI and implemented robust unit and integration testing frameworks.',
     url: 'https://github.com/BaoquocF1804',
     image: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&h=600&fit=crop',
   },
@@ -260,7 +270,12 @@ export const education: TimelineItem[] = [
     date: 'October 2020 - October 2024',
     location: 'Ho Chi Minh City University of Technology',
     title: 'Computer Engineering Major',
-    content: <p>GPA: 3.2 - Completed comprehensive coursework in software engineering, system design, and computer science fundamentals.</p>,
+    content: (
+      <p>
+        GPA: 3.2 - Completed comprehensive coursework in software engineering, system design, and computer science
+        fundamentals.
+      </p>
+    ),
   },
 ];
 
@@ -271,11 +286,23 @@ export const experience: TimelineItem[] = [
     title: 'Software Engineer - Backend',
     content: (
       <div>
-        <p className="mb-2">Backend Engineer with 2+ years of experience in backend development and system integration for e-commerce platforms. Skilled in Golang, Python, and cloud-native microservices.</p>
+        <p className="mb-2">
+          Backend Engineer with 2+ years of experience in backend development and system integration for e-commerce
+          platforms. Skilled in Golang, Python, and cloud-native microservices.
+        </p>
         <ul className="list-disc list-inside space-y-1">
-          <li>Participated in the design, development, and operation of integration-accounting-warehouse systems for large-scale e-commerce platforms</li>
-          <li>Built and maintained partner integration APIs (logistics, payment, merchant) using Golang and Python, handling millions of monthly transactions</li>
-          <li>Designed and deployed microservices on Google Cloud Platform (GKE) with gRPC for efficient service-to-service communication</li>
+          <li>
+            Participated in the design, development, and operation of integration-accounting-warehouse systems for
+            large-scale e-commerce platforms
+          </li>
+          <li>
+            Built and maintained partner integration APIs (logistics, payment, merchant) using Golang and Python,
+            handling millions of monthly transactions
+          </li>
+          <li>
+            Designed and deployed microservices on Google Cloud Platform (GKE) with gRPC for efficient
+            service-to-service communication
+          </li>
           <li>Implemented CI/CD pipelines to accelerate deployment cycles and reduce production issues</li>
           <li>Optimized API latency from ~500ms down to 200ms, improving overall system performance</li>
           <li>Contributed to unit testing, integration testing, and code reviews to ensure service reliability</li>
