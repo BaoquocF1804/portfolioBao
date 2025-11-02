@@ -13,6 +13,15 @@ const nextConfig = {
       rule.include = undefined;
     });
 
+    // Add PDF file loader
+    config.module.rules.push({
+      test: /\.pdf$/,
+      type: 'asset/resource',
+      generator: {
+        filename: 'static/media/[name].[hash][ext]',
+      },
+    });
+
     return config;
   },
   compress: true,

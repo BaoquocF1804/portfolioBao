@@ -11,22 +11,10 @@ import {
 import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
-import profilepic from '../images/profilepic.jpg';
+import profilepic from '../images/avatar.jpg';
 import testimonialImage from '../images/testimonial.webp';
+import resumePDF from '../images/LE-BAO-QUOC.pdf';
 import {
   About,
   ContactSection,
@@ -69,24 +57,24 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Bao Quoc`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a Ho Chi Minh City based <strong className="text-stone-100">Backend Software Engineer</strong>, currently working
+        at <strong className="text-stone-100">TEKO VIETNAM TECHNOLOGY JOINT STOCK COMPANY</strong> helping build scalable, 
+        high-performance integration-accounting-warehouse systems for large-scale e-commerce platforms.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        In my free time, I enjoy listening to <strong className="text-stone-100">music</strong>, 
+        reading <strong className="text-stone-100">books</strong>, and exploring 
+        <strong className="text-stone-100"> new ideas and experiences</strong>.
       </p>
     </>
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
+      href: resumePDF,
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
@@ -108,12 +96,12 @@ export const aboutData: About = {
   to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
   in.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Ho Chi Minh City', Icon: MapIcon},
+    {label: 'Age', text: '24', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'Vietnamese', Icon: FlagIcon},
+    {label: 'Interests', text: 'Listening to music, playing video games, and reading books', Icon: SparklesIcon},
+    {label: 'Study', text: 'University of Technology Ho Chi Minh City', Icon: AcademicCapIcon},
+    {label: 'Employment', text: 'TEKO SOFTWARE SOLUTION COMPANY', Icon: BuildingOffice2Icon},
   ],
 };
 
@@ -125,16 +113,33 @@ export const skills: SkillGroup[] = [
     name: 'Spoken languages',
     skills: [
       {
-        name: 'English',
+        name: 'Vietnamese',
         level: 10,
       },
       {
-        name: 'French',
-        level: 4,
+        name: 'English',
+        level: 7,
       },
       {
-        name: 'Spanish',
-        level: 3,
+        name: 'German',
+        level: 2,
+      },
+    ],
+  },
+    {
+    name: 'Backend development',
+    skills: [
+      {
+        name: 'Golang',
+        level: 9,
+      },
+      {
+        name: 'Python',
+        level: 8,
+      },
+      {
+        name: 'Kotlin',
+        level: 4,
       },
     ],
   },
@@ -143,48 +148,32 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'React',
-        level: 9,
-      },
-      {
-        name: 'Typescript',
         level: 7,
       },
       {
-        name: 'GraphQL',
+        name: 'Typescript',
         level: 6,
       },
+      {
+        name: 'JavaScript',
+        level: 6,
+      },
+    
     ],
   },
   {
-    name: 'Backend development',
+    name: 'Database',
     skills: [
       {
-        name: 'Node.js',
-        level: 8,
-      },
-      {
-        name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
-      },
-    ],
-  },
-  {
-    name: 'Mobile development',
-    skills: [
-      {
-        name: 'React Native',
+        name: 'MySQL',
         level: 9,
       },
       {
-        name: 'Flutter',
+        name: 'PostgreSQL',
         level: 4,
       },
       {
-        name: 'Swift',
+        name: 'MongoDB',
         level: 3,
       },
     ],
@@ -196,70 +185,70 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage1,
+    title: 'E-Commerce Integration Platform',
+    description: 'Built scalable microservices architecture for integration-accounting-warehouse systems handling millions of transactions monthly using Golang and Python.',
+    url: 'https://github.com/BaoquocF1804',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop',
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage2,
+    title: 'Partner API Gateway',
+    description: 'Developed RESTful APIs for logistics, payment, and merchant integrations with optimized performance (500ms → 200ms latency).',
+    url: 'https://github.com/BaoquocF1804',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop',
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage3,
+    title: 'Cloud-Native Microservices',
+    description: 'Designed and deployed microservices on Google Cloud Platform (GKE) with gRPC for efficient service-to-service communication.',
+    url: 'https://github.com/BaoquocF1804',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop',
   },
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage4,
+    title: 'CI/CD Pipeline Automation',
+    description: 'Implemented automated CI/CD pipelines using GitHub Actions and GitLab CI to accelerate deployment cycles and reduce production issues.',
+    url: 'https://github.com/BaoquocF1804',
+    image: 'https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=800&h=600&fit=crop',
   },
   {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage5,
+    title: 'High-Performance API Optimization',
+    description: 'Optimized critical API endpoints and database queries, improving system performance and reducing response times by 60%.',
+    url: 'https://github.com/BaoquocF1804',
+    image: 'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&h=600&fit=crop',
   },
   {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage6,
+    title: 'Distributed System Architecture',
+    description: 'Architected event-driven microservices with message queues and caching layers for high-availability e-commerce systems.',
+    url: 'https://github.com/BaoquocF1804',
+    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop',
   },
   {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage7,
+    title: 'Payment Integration Service',
+    description: 'Built secure payment gateway integrations with multiple providers, ensuring PCI compliance and transaction reliability.',
+    url: 'https://github.com/BaoquocF1804',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop',
   },
   {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage8,
+    title: 'Warehouse Management System',
+    description: 'Developed backend services for real-time inventory tracking and warehouse operations with PostgreSQL and Redis.',
+    url: 'https://github.com/BaoquocF1804',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
   },
   {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage9,
+    title: 'Monitoring & Observability',
+    description: 'Implemented comprehensive logging, monitoring, and alerting systems using Prometheus, Grafana, and ELK stack.',
+    url: 'https://github.com/BaoquocF1804',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
   },
   {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage10,
+    title: 'Database Performance Tuning',
+    description: 'Optimized database schemas, indexes, and queries for MySQL and PostgreSQL, handling high-volume transactional workloads.',
+    url: 'https://github.com/BaoquocF1804',
+    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=600&fit=crop',
   },
   {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage11,
+    title: 'API Documentation & Testing',
+    description: 'Created comprehensive API documentation with Swagger/OpenAPI and implemented robust unit and integration testing frameworks.',
+    url: 'https://github.com/BaoquocF1804',
+    image: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&h=600&fit=crop',
   },
 ];
 
@@ -268,40 +257,30 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
-  },
-  {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'October 2020 - October 2024',
+    location: 'Ho Chi Minh City University of Technology',
+    title: 'Computer Engineering Major',
+    content: <p>GPA: 3.2 - Completed comprehensive coursework in software engineering, system design, and computer science fundamentals.</p>,
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'June 2023 - Present',
+    location: 'TEKO VIETNAM TECHNOLOGY JOINT STOCK COMPANY',
+    title: 'Software Engineer - Backend',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
-    ),
-  },
-  {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
-    content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+      <div>
+        <p className="mb-2">Backend Engineer with 2+ years of experience in backend development and system integration for e-commerce platforms. Skilled in Golang, Python, and cloud-native microservices.</p>
+        <ul className="list-disc list-inside space-y-1">
+          <li>Participated in the design, development, and operation of integration-accounting-warehouse systems for large-scale e-commerce platforms</li>
+          <li>Built and maintained partner integration APIs (logistics, payment, merchant) using Golang and Python, handling millions of monthly transactions</li>
+          <li>Designed and deployed microservices on Google Cloud Platform (GKE) with gRPC for efficient service-to-service communication</li>
+          <li>Implemented CI/CD pipelines to accelerate deployment cycles and reduce production issues</li>
+          <li>Optimized API latency from ~500ms down to 200ms, improving overall system performance</li>
+          <li>Contributed to unit testing, integration testing, and code reviews to ensure service reliability</li>
+        </ul>
+      </div>
     ),
   },
 ];
@@ -315,17 +294,14 @@ export const testimonial: TestimonialSection = {
     {
       name: 'John Doe',
       text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
     },
     {
       name: 'Jane Doe',
       text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
     },
     {
       name: 'Someone else',
       text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
     },
   ],
 };
@@ -340,23 +316,23 @@ export const contact: ContactSection = {
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'lbaoquoc.1804@gmail.com',
+      href: 'mailto:lbaoquoc.1804@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'Ho Chi Minh City, Vietnam',
+      href: 'https://www.google.ca/maps/place/Ho+Chi+Minh+City,+Vietnam/@10.7546181,106.3655626,10z/data=!3m1!4b1!4m6!3m5!1s0x317529292e8d3dd1:0xf15f5aad773c112b!8m2!3d10.8230989!4d106.6296638!16zL20vMGhuNGg?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D',
     },
     {
       type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      text: '@lbaoquoc',
+      href: 'https://www.instagram.com/optimistic_mun_18/',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'BaoquocF1804',
+      href: 'https://github.com/BaoquocF1804',
     },
   ],
 };
@@ -365,9 +341,7 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/BaoquocF1804'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/bao-quoc-panda18/'},
+  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/optimistic_mun_18/'},
 ];
